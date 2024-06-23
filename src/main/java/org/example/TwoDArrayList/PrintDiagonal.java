@@ -3,17 +3,17 @@ package org.example.TwoDArrayList;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TakingInput2DArrayList {
-    static void printArrayList(ArrayList<ArrayList<Integer>> mat){
-        int row = mat.size();
-
-        for (int i = 0; i < row; i++) {
-            int col = mat.get(0).size();
-            for (int j = 0; j < col; j++) {
-                System.out.print(mat.get(i).get(j) + " ");
-            }
-            System.out.println();
+public class PrintDiagonal {
+    static void printDiagonal(ArrayList<ArrayList<Integer>> mat){
+        int r = mat.size();
+        int c= mat.get(0).size();
+        int n = r-1;
+        while (r <= n && c >=0){
+            System.out.print(mat.get(r).get(c));
+            r++;
+            c--;
         }
+
     }
     public static void main(String[] args) {
         Scanner Sc = new Scanner(System.in);
@@ -27,6 +27,7 @@ public class TakingInput2DArrayList {
             }
             mat.add(ithRow);
         }
-        printArrayList(mat);
+
+        printDiagonal(mat);
     }
 }
