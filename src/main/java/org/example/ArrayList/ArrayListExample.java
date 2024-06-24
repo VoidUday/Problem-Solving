@@ -12,6 +12,7 @@ public class ArrayListExample {
 
         //How to add element
 
+
         l.add(34);
         l.add(56);
         l.add(456);
